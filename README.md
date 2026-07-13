@@ -1,7 +1,5 @@
 # 미션 소개
 
-파트4에 오신 여러분들을 환영합니다!
-
 이번 미션은 두 명의 연구자가 협업하는 아래 시나리오를 참고하여 도커 기반 워크플로우를 설계하고, 
 필요한 도커파일을 작성하는 미션입니다.
 
@@ -9,6 +7,40 @@
 
 - **연구자 1**: 데이터 전처리, 탐색적 데이터 분석(EDA), 모델링 및 모델 파일 추출
 - **연구자 2**: 추출된 모델을 활용한 추론
+
+---
+
+## 팀 보고서
+
+<a href="https://minjaejeon0827.github.io/sprint_mission/reports/보고서.pdf">바로 가기</a>
+
+---
+
+# 프로젝트 구조
+
+```
+mission-result/
+├── reports/
+|   └── 보고서.pdf     # 보고서·발표자료 PDF
+|
+|   # 제출물 1: 코드 폴더
+├── researcher1/  # 연구자 1
+|   ├── src/
+|   |   ├── data/     # mission15_train.csv, mission15_test.csv
+|   |   ├── eda_modeling.ipynb  # 전처리·EDA·모델링 노트북
+|   |   └── train.py
+|   |
+│   └── .dockerignore · Dockerfile · requirements.txt
+│
+├── researcher2/  # 연구자 2
+|   ├── src/
+|   |   └── work/inference.ipynb  # 추론 노트북
+│   └── .dockerignore · Dockerfile · requirements.txt  # Jupyter 이미지
+│
+└── .dockerignore · docker-compose.yml · .env · README.md
+```
+
+---
 
 # 사용 데이터셋
 
@@ -27,6 +59,8 @@
 | Sleep Hours | 학생이 하루 평균 수면 시간 |
 | Sample Question Papers Practiced | 학생이 연습한 모의고사 수 |
 | Performance Index | **목표변수.** 각 학생의 전반적인 성취도를 나타내는 지표 <br> (성취도 지수는 학생의 학업 성취도를 나타내며, 가장 가까운 정수로 반올림됩니다. <br>지수는 10에서 100까지이며, 값이 높을수록 더 나은 성취도를 나타냅니다.) |
+
+---
 
 # 협업 시나리오
 
@@ -50,6 +84,8 @@
       [연구자 1]의 Docker Hub 이미지를 통해 필요한 파일을 가져와야 한다.)
 ```
 
+---
+
 # 제출 안내
 
 미션 15 폴더 하위에 {팀명}_{이름}으로 폴더를 생성하고, 그 안에 **코드 폴더**와 **보고서 pdf(2페이지 이내)**를 제출해 주세요.
@@ -59,6 +95,8 @@
    - Docker Hub URL
    - 연구자 1의 데이터 전처리 및 모델링 결과 요약
    - 코드 아키텍처 도식 및 설명
+
+---
 
 # 참고 사항
 
